@@ -34,6 +34,9 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        button.plainText {
+            background-color: #df9102;;
+        }
         button.all {
             background-color: #007BFF;
         }
@@ -87,11 +90,15 @@
     
     <!-- Buttons -->
     <div class="button-container">
-        <!-- All Button-->
-        <button class="all" onclick="showAllText()">All</button>
-        <!-- A Author Only Button-->
+        <!-- Plain Text Button -->
+        <button class="plainText" onclick="showPlainText()">All Plain Text</button>
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All Colored Text</button>
+        <!-- Empty Button (for spacing) -->
+        <button class="empty" style = "visibility: hidden;">Empty Button</button>
+        <!-- A Author Only Button -->
         <button class="aAuthor" onclick="showAAuthorText()">A Author (Older Story)</button>
-        <!-- B Author Only Button-->
+        <!-- B Author Only Button -->
         <button class="bAuthor" onclick="showBAuthorText()">B Author (Younger Story)</button>
         <!-- Redactor Only Button -->
         <button class="redactor" onclick="showRedactorText()">Redactor</button>
@@ -128,6 +135,22 @@
 
     <script>
 
+        // Plain Text Button
+        function showPlainText() {
+            localStorage.setItem("savedLog", "Button Plain Text"); // sets the setItem in the browser at "Button Plain Text"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.aAuthorText, span.bAuthorText, span.redactorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.color = "black"; // Change the color of all text to black
+                span.style.visibility = "visible"; // Change the Visibility of the A Author, B Author, and Redactor to Visible
+            });
+        }
+        
         // All Button
         function showAllText() {
             localStorage.setItem("savedLog", "Button All"); // sets the setItem in the browser at "Button All"
@@ -139,7 +162,38 @@
             var spans = div.querySelectorAll("span.aAuthorText, span.bAuthorText, span.redactorText");  // Select all <span> elements within this div
             // Loop through all the spans and apply new styles
             spans.forEach(function(span) {
-                span.style.visibility = "visible"; // Change the Visibility of the A and B Authors to Visible
+                span.style.visibility = "visible"; // Change the Visibility of the A Author, B Author, and Redactor to Visible
+            });
+            
+            
+            // Change color of the A Author back to color again, and make sure it's visible
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.aAuthorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the A Author to Visible
+                span.style.color = "#ff1e00"; // make sure its text back to colored
+            });
+
+            // Change color of the B Author back to color again, and make sure it's visible
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.bAuthorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the B Author to Visible
+                span.style.color = "#0d6b05"; // make sure its text back to colored
+            });
+
+            // Change color of the Redactor back to color again, and make sure it's visible
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.redactorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the B Author to Visible
+                span.style.color = "#50025a"; // make sure its text back to colored
             });
         }
 
@@ -156,6 +210,7 @@
             // Loop through all the spans and apply new styles
             spans.forEach(function(span) {
                 span.style.visibility = "visible"; // Change the Visibility of the A Author to Visible
+                span.style.color = "#ff1e00"; // make sure its text back to colored
             });
             
             // Hide the other sources
@@ -181,6 +236,7 @@
             // Loop through all the spans and apply new styles
             spans.forEach(function(span) {
                 span.style.visibility = "visible"; // Change the Visibility of the B Author Source to Visible
+                span.style.color = "#0d6b05"; // make sure its text back to colored
             });
             
             // Hide the other sources
@@ -214,6 +270,7 @@
             // Loop through all the spans and apply new styles
             spans.forEach(function(span) {
                 span.style.visibility = "hidden"; // Change the Visibility of the A and B Authors to Hidden
+                span.style.color = "#50025a"; // make sure its text back to colored
             });
         }
     </script>
