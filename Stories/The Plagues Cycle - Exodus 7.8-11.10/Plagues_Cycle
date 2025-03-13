@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.elohist {
+            background-color: #0d6b05;
+        }
+        button.priestly {
+            background-color: #0a0b5e;
+        }
+        button.redactor {
+            background-color: #50025a;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .elohistText {
+            color:#0d6b05;
+        }
+        .priestlyText {
+            color:#0a0b5e;
+        }
+        .redactorText {
+            color: #50025a;
+        }
+        .chapterTitleText {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../../index.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button-->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Elohist Only Button-->
+        <button class="elohist" onclick="showElohistText()">E (Elohist)</button>
+        <!-- Priestly Source Only Button-->
+        <button class="priestly" onclick="showPriestlySourceText()">P (Priestly Source)</button>
+        <!-- Redactor Only Button -->
+        <button class="redactor" onclick="showRedactorText()">Redactor</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <h2>The Plagues Cycle - Exodus 7:8-11:10 (ESV) (William Propp)</h2>
+        <div class="text-box" id="mainText"><span class="priestlyText">8 Then the Lord said to Moses and Aaron, 9 “When Pharaoh says to you, ‘Prove yourselves by working a miracle,’ then you shall say to Aaron, ‘Take your staff and cast it down before Pharaoh, that it may become a serpent.’” 10 So Moses and Aaron went to Pharaoh and did just as the Lord commanded. Aaron cast down his staff before Pharaoh and his servants, and it became a serpent. 11 Then Pharaoh summoned the wise men and the sorcerers, and they, the magicians of Egypt, also did the same by their secret arts. 12 For each man cast down his staff, and they became serpents. But Aaron's staff swallowed up their staffs. 13 Still Pharaoh's heart was hardened, and he would not listen to them, as the Lord had said.</span><span class="chapterTitleText">
+
+            The First Plague: Water Turned to Blood</span><span class="elohistText">
+            14 Then the Lord said to Moses, “Pharaoh's heart is hardened; he refuses to let the people go. 15 Go to Pharaoh in the morning, as he is going out to the water. Stand on the bank of the Nile to meet him, and take in your hand the staff that turned into a serpent. 16 And you shall say to him, ‘The Lord, the God of the Hebrews, sent me to you, saying, “Let my people go, that they may serve me in the wilderness.” But so far, you have not obeyed. 17 Thus says the Lord, “By this you shall know that I am the Lord: behold, with the staff that is in my hand I will strike the water that is in the Nile, and it shall turn into blood. 18 The fish in the Nile shall die, and the Nile will stink, and the Egyptians will grow weary of drinking water from the Nile.”’” </span><span class="priestlyText">19 And the Lord said to Moses, “Say to Aaron, ‘Take your staff and stretch out your hand over the waters of Egypt, over their rivers, their canals, and their ponds, and all their pools of water, so that they may become blood, and there shall be blood throughout all the land of Egypt, even in vessels of wood and in vessels of stone.’”
+            
+            20 Moses and Aaron did as the Lord commanded. </span><span class="elohistText">In the sight of Pharaoh and in the sight of his servants he lifted up the staff and struck the water in the Nile, and all the water in the Nile turned into blood. 21 And the fish in the Nile died, and the Nile stank, so that the Egyptians could not drink water from the Nile. </span><span class="priestlyText">There was blood throughout all the land of Egypt. 22 But the magicians of Egypt did the same by their secret arts. So Pharaoh's heart remained hardened, and he would not listen to them, as the Lord had said. </span><span class="elohistText">23 Pharaoh turned and went into his house, and he did not take even this to heart. 24 And all the Egyptians dug along the Nile for water to drink, for they could not drink the water of the Nile.
+            
+            25 Seven full days passed after the Lord had struck the Nile.</span><span class="chapterTitleText">
+            
+            The Second Plague: Frogs</span><span class="elohistText">
+            8  Then the Lord said to Moses, “Go in to Pharaoh and say to him, ‘Thus says the Lord, “Let my people go, that they may serve me. 2 But if you refuse to let them go, behold, I will plague all your country with frogs. 3 The Nile shall swarm with frogs that shall come up into your house and into your bedroom and on your bed and into the houses of your servants and your people, and into your ovens and your kneading bowls. 4 The frogs shall come up on you and on your people and on all your servants.”’” </span><span class="priestlyText">5  And the Lord said to Moses, “Say to Aaron, ‘Stretch out your hand with your staff over the rivers, over the canals and over the pools, and make frogs come up on the land of Egypt!’” 6 So Aaron stretched out his hand over the waters of Egypt, and the frogs came up and covered the land of Egypt. 7 But the magicians did the same by their secret arts and made frogs come up on the land of Egypt.</span><span class="elohistText">
+            
+            8 Then Pharaoh called Moses and Aaron and said, “Plead with the Lord to take away the frogs from me and from my people, and I will let the people go to sacrifice to the Lord.” 9 Moses said to Pharaoh, “Be pleased to command me when I am to plead for you and for your servants and for your people, that the frogs be cut off from you and your houses and be left only in the Nile.” 10 And he said, “Tomorrow.” Moses said, “Be it as you say, so that you may know that there is no one like the Lord our God. 11 The frogs shall go away from you and your houses and your servants and your people. They shall be left only in the Nile.” 12 So Moses and Aaron went out from Pharaoh, and Moses cried to the Lord about the frogs, as he had agreed with Pharaoh. 13 And the Lord did according to the word of Moses. The frogs died out in the houses, the courtyards, and the fields. 14 And they gathered them together in heaps, and the land stank. 15 But when Pharaoh saw that there was a respite, he hardened his heart </span><span class="priestlyText">and would not listen to them, as the Lord had said.</span><span class="chapterTitleText">
+            
+            The Third Plague: Gnats</span><span class="priestlyText">
+            16 Then the Lord said to Moses, “Say to Aaron, ‘Stretch out your staff and strike the dust of the earth, so that it may become gnats in all the land of Egypt.’” 17 And they did so. Aaron stretched out his hand with his staff and struck the dust of the earth, and there were gnats on man and beast. All the dust of the earth became gnats in all the land of Egypt. 18 The magicians tried by their secret arts to produce gnats, but they could not. So there were gnats on man and beast. 19 Then the magicians said to Pharaoh, “This is the finger of God.” But Pharaoh's heart was hardened, and he would not listen to them, as the Lord had said.</span><span class="chapterTitleText">
+            
+            The Fourth Plague: Flies</span><span class="elohistText">
+            20 Then the Lord said to Moses, “Rise up early in the morning and present yourself to Pharaoh, as he goes out to the water, and say to him, ‘Thus says the Lord, “Let my people go, that they may serve me. 21 Or else, if you will not let my people go, behold, I will send swarms of flies on you and your servants and your people, and into your houses. And the houses of the Egyptians shall be filled with swarms of flies, and also the ground on which they stand. 22 But on that day I will set apart the land of Goshen, where my people dwell, so that no swarms of flies shall be there, that you may know that I am the Lord in the midst of the earth. 23 Thus I will put a division between my people and your people. Tomorrow this sign shall happen.”’” 24 And the Lord did so. There came great swarms of flies into the house of Pharaoh and into his servants' houses. Throughout all the land of Egypt the land was ruined by the swarms of flies.
+            
+            25 Then Pharaoh called Moses and Aaron and said, “Go, sacrifice to your God within the land.” 26 But Moses said, “It would not be right to do so, for the offerings we shall sacrifice to the Lord our God are an abomination to the Egyptians. If we sacrifice offerings abominable to the Egyptians before their eyes, will they not stone us? 27 We must go three days' journey into the wilderness and sacrifice to the Lord our God as he tells us.” 28 So Pharaoh said, “I will let you go to sacrifice to the Lord your God in the wilderness; only you must not go very far away. Plead for me.” 29 Then Moses said, “Behold, I am going out from you and I will plead with the Lord that the swarms of flies may depart from Pharaoh, from his servants, and from his people, tomorrow. Only let not Pharaoh cheat again by not letting the people go to sacrifice to the Lord.” 30 So Moses went out from Pharaoh and prayed to the Lord. 31 And the Lord did as Moses asked, and removed the swarms of flies from Pharaoh, from his servants, and from his people; not one remained. 32 But Pharaoh hardened his heart this time also, and did not let the people go.</span><span class="chapterTitleText">
+            
+            The Fifth Plague: Egyptian Livestock Die</span><span class="elohistText">
+            9 Then the Lord said to Moses, “Go in to Pharaoh and say to him, ‘Thus says the Lord, the God of the Hebrews, “Let my people go, that they may serve me. 2 For if you refuse to let them go and still hold them, 3 behold, the hand of the Lord will fall with a very severe plague upon your livestock that are in the field, the horses, the donkeys, the camels, the herds, and the flocks. 4 But the Lord will make a distinction between the livestock of Israel and the livestock of Egypt, so that nothing of all that belongs to the people of Israel shall die.”’” 5 And the Lord set a time, saying, “Tomorrow the Lord will do this thing in the land.” 6 And the next day the Lord did this thing. All the livestock of the Egyptians died, but not one of the livestock of the people of Israel died. 7 And Pharaoh sent, and behold, not one of the livestock of Israel was dead. But the heart of Pharaoh was hardened, and he did not let the people go.</span><span class="chapterTitleText">
+            
+            The Sixth Plague: Boils</span><span class="priestlyText">
+            8 And the Lord said to Moses and Aaron, “Take handfuls of soot from the kiln, and let Moses throw them in the air in the sight of Pharaoh. 9 It shall become fine dust over all the land of Egypt, and become boils breaking out in sores on man and beast throughout all the land of Egypt.” 10 So they took soot from the kiln and stood before Pharaoh. And Moses threw it in the air, and it became boils breaking out in sores on man and beast. 11 And the magicians could not stand before Moses because of the boils, for the boils came upon the magicians and upon all the Egyptians. 12 But the Lord hardened the heart of Pharaoh, and he did not listen to them, as the Lord had spoken to Moses.</span><span class="chapterTitleText">
+            
+            The Seventh Plague: Hail</span><span class="elohistText">
+            13 Then the Lord said to Moses, “Rise up early in the morning and present yourself before Pharaoh and say to him, ‘Thus says the Lord, the God of the Hebrews, “Let my people go, that they may serve me. 14 For this time I will send all my plagues on you yourself, and on your servants and your people, so that you may know that there is none like me in all the earth. 15 For by now I could have put out my hand and struck you and your people with pestilence, and you would have been cut off from the earth. 16 But for this purpose I have raised you up, to show you my power, so that my name may be proclaimed in all the earth. 17 You are still exalting yourself against my people and will not let them go. 18 Behold, about this time tomorrow I will cause very heavy hail to fall, such as never has been in Egypt from the day it was founded until now. 19 Now therefore send, get your livestock and all that you have in the field into safe shelter, for every man and beast that is in the field and is not brought home will die when the hail falls on them.”’” 20 Then whoever feared the word of the Lord among the servants of Pharaoh hurried his slaves and his livestock into the houses, 21 but whoever did not pay attention to the word of the Lord left his slaves and his livestock in the field.
+            
+            22 Then the Lord said to Moses, “Stretch out your hand toward heaven, so that there may be hail in all the land of Egypt, on man and beast and every plant of the field, in the land of Egypt.” 23 Then Moses stretched out his staff toward heaven, and the Lord sent thunder and hail, and fire ran down to the earth. And the Lord rained hail upon the land of Egypt. 24 There was hail and fire flashing continually in the midst of the hail, very heavy hail, such as had never been in all the land of Egypt since it became a nation. 25 The hail struck down everything that was in the field in all the land of Egypt, both man and beast. And the hail struck down every plant of the field and broke every tree of the field. 26 Only in the land of Goshen, where the people of Israel were, was there no hail.
+            
+            27 Then Pharaoh sent and called Moses and Aaron and said to them, “This time I have sinned; the Lord is in the right, and I and my people are in the wrong. 28 Plead with the Lord, for there has been enough of God's thunder and hail. I will let you go, and you shall stay no longer.” 29 Moses said to him, “As soon as I have gone out of the city, I will stretch out my hands to the Lord. The thunder will cease, and there will be no more hail, so that you may know that the earth is the Lord's. 30 But as for you and your servants, I know that you do not yet fear the Lord God.” 31 (The flax and the barley were struck down, for the barley was in the ear and the flax was in bud. 32 But the wheat and the emmer were not struck down, for they are late in coming up.) 33 So Moses went out of the city from Pharaoh and stretched out his hands to the Lord, and the thunder and the hail ceased, and the rain no longer poured upon the earth. 34 But when Pharaoh saw that the rain and the hail and the thunder had ceased, he sinned yet again and hardened his heart, he and his servants. </span><span class="redactorText">35 So the heart of Pharaoh was hardened, and he did not let the people of Israel go, just as the Lord had spoken through Moses.</span><span class="chapterTitleText">
+            
+            The Eighth Plague: Locusts</span><span class="elohistText">
+            10 Then the Lord said to Moses, “Go in to Pharaoh, for I have hardened his heart and the heart of his servants, that I may show these signs of mine among them, 2 and that you may tell in the hearing of your son and of your grandson how I have dealt harshly with the Egyptians and what signs I have done among them, that you may know that I am the Lord.”
+            
+            3 So Moses and Aaron went in to Pharaoh and said to him, “Thus says the Lord, the God of the Hebrews, ‘How long will you refuse to humble yourself before me? Let my people go, that they may serve me. 4 For if you refuse to let my people go, behold, tomorrow I will bring locusts into your country, 5 and they shall cover the face of the land, so that no one can see the land. And they shall eat what is left to you after the hail, and they shall eat every tree of yours that grows in the field, 6 and they shall fill your houses and the houses of all your servants and of all the Egyptians, as neither your fathers nor your grandfathers have seen, from the day they came on earth to this day.’” Then he turned and went out from Pharaoh.
+            
+            7 Then Pharaoh's servants said to him, “How long shall this man be a snare to us? Let the men go, that they may serve the Lord their God. Do you not yet understand that Egypt is ruined?” 8 So Moses and Aaron were brought back to Pharaoh. And he said to them, “Go, serve the Lord your God. But which ones are to go?” 9 Moses said, “We will go with our young and our old. We will go with our sons and daughters and with our flocks and herds, for we must hold a feast to the Lord.” 10 But he said to them, “The Lord be with you, if ever I let you and your little ones go! Look, you have some evil purpose in mind. 11 No! Go, the men among you, and serve the Lord, for that is what you are asking.” And they were driven out from Pharaoh's presence.
+            
+            12 Then the Lord said to Moses, “Stretch out your hand over the land of Egypt for the locusts, so that they may come upon the land of Egypt and eat every plant in the land, all that the hail has left.” 13 So Moses stretched out his staff over the land of Egypt, and the Lord brought an east wind upon the land all that day and all that night. When it was morning, the east wind had brought the locusts. 14 The locusts came up over all the land of Egypt and settled on the whole country of Egypt, such a dense swarm of locusts as had never been before, nor ever will be again. 15 They covered the face of the whole land, so that the land was darkened, and they ate all the plants in the land and all the fruit of the trees that the hail had left. Not a green thing remained, neither tree nor plant of the field, through all the land of Egypt. 16 Then Pharaoh hastily called Moses and Aaron and said, “I have sinned against the Lord your God, and against you. 17 Now therefore, forgive my sin, please, only this once, and plead with the Lord your God only to remove this death from me.” 18 So he went out from Pharaoh and pleaded with the Lord. 19 And the Lord turned the wind into a very strong west wind, which lifted the locusts and drove them into the Red Sea. Not a single locust was left in all the country of Egypt. </span><span class="redactorText">20 But the Lord hardened Pharaoh's heart, and he did not let the people of Israel go.</span><span class="chapterTitleText">
+            
+            The Ninth Plague: Darkness</span><span class="elohistText">
+            21 Then the Lord said to Moses, “Stretch out your hand toward heaven, that there may be darkness over the land of Egypt, a darkness to be felt.” 22 So Moses stretched out his hand toward heaven, and there was pitch darkness in all the land of Egypt three days. 23 They did not see one another, nor did anyone rise from his place for three days, but all the people of Israel had light where they lived. 24 Then Pharaoh called Moses and said, “Go, serve the Lord; your little ones also may go with you; only let your flocks and your herds remain behind.” 25 But Moses said, “You must also let us have sacrifices and burnt offerings, that we may sacrifice to the Lord our God. 26 Our livestock also must go with us; not a hoof shall be left behind, for we must take of them to serve the Lord our God, and we do not know with what we must serve the Lord until we arrive there.” </span><span class="redactorText">27 But the Lord hardened Pharaoh's heart, and he would not let them go. </span><span class="elohistText">28 Then Pharaoh said to him, “Get away from me; take care never to see my face again, for on the day you see my face you shall die.” 29 Moses said, “As you say! I will not see your face again.”</span><span class="chapterTitleText">
+            
+            A Final Plague Threatened</span><span class="elohistText">
+            11 The Lord said to Moses, “Yet one plague more I will bring upon Pharaoh and upon Egypt. Afterward he will let you go from here. When he lets you go, he will drive you away completely. 2 Speak now in the hearing of the people, that they ask, every man of his neighbor and every woman of her neighbor, for silver and gold jewelry.” 3 And the Lord gave the people favor in the sight of the Egyptians. Moreover, the man Moses was very great in the land of Egypt, in the sight of Pharaoh's servants and in the sight of the people.
+            
+            4 So Moses said, “Thus says the Lord: ‘About midnight I will go out in the midst of Egypt, 5 and every firstborn in the land of Egypt shall die, from the firstborn of Pharaoh who sits on his throne, even to the firstborn of the slave girl who is behind the handmill, and all the firstborn of the cattle. 6 There shall be a great cry throughout all the land of Egypt, such as there has never been, nor ever will be again. 7 But not a dog shall growl against any of the people of Israel, either man or beast, that you may know that the Lord makes a distinction between Egypt and Israel.’ 8 And all these your servants shall come down to me and bow down to me, saying, ‘Get out, you and all the people who follow you.’ And after that I will go out.” And he went out from Pharaoh in hot anger. </span><span class="redactorText">9 Then the Lord said to Moses, “Pharaoh will not listen to you, that my wonders may be multiplied in the land of Egypt.”
+            
+            10 Moses and Aaron did all these wonders before Pharaoh, and the Lord hardened Pharaoh's heart, and he did not let the people of Israel go out of his land.</span></div>
+    </div>
+
+
+    <script>
+
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All"); // sets the setItem in the browser at "Button All"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText, span.priestlyText, span.redactorText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Elohist Source, Priestly Source, Redactor, and Chapter Titles to Visible
+            });
+        }
+
+        // Elohist Source Button
+        function showElohistText() {
+            localStorage.setItem("savedLog", "Button Elohist"); // sets the setItem in the browser at "Button Elohist"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Elohist Source to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.priestlyText, span.redactorText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Priestly Source, Redactor, and Chapter Titles to Hidden
+            });
+        }
+        
+        // Priestly Source Button
+        function showPriestlySourceText() {
+            localStorage.setItem("savedLog", "Button Priestly Source"); // sets the setItem in the browser at "Button Priestly Source"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.priestlyText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Priestly Source to Visible
+            });
+
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText, span.redactorText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Elohist Source, Redactor, and Chapter Titles to Hidden
+            });
+        }
+
+        // Redactor Button
+        function showRedactorText() {
+            localStorage.setItem("savedLog", "Redactor"); // sets the setItem in the browser at "Redactor"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.redactorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Redactor Source to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText, span.priestlyText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Elohist Source, Priestly Source, and Chapter Titles to Hidden
+            });
+        }
+    </script>
+</body>
+</html>
