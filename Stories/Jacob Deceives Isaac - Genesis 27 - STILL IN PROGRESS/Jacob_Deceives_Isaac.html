@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.jawhist {
+            background-color: #ff1e00;
+        }
+        button.elohist {
+            background-color: #0d6b05;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .jawhistText {
+            color:#ff1e00;
+        }
+        .elohistText {
+            color:#0d6b05;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../../index.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Jawhist Only Button -->
+        <button class="jawhist" onclick="showJawhistText()">J (Jawhist)</button>
+        <!-- Elohist Only Button -->
+        <button class="elohist" onclick="showElohistText()">E (Elohist)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <h2>Jacob Deceives Isaac (Genesis 27) (ESV) (Gunkel)</h2>
+        <div class="text-box" id="mainText"><span class="jawhistText">"Yawheh is love," said Abraham. </span><span class="elohistText">Issac said I saw God in a dream. </span></div>
+    </div>
+
+
+    <script>
+
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All"); // sets the setItem in the browser at "Button All"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.jawhistText, span.elohistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Jawhist and Elohist Sources to Visible
+            });
+        }
+
+        // Jawhist Button
+        function showJawhistText() {
+            localStorage.setItem("savedLog", "Button Jawhist"); // sets the setItem in the browser at "Button Jawhist"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.jawhistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Jawhist Source to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Elohist Source to Hidden
+            });
+        }
+        
+        // Elohist
+        function showElohistText() {
+            localStorage.setItem("savedLog", "Button Elohist"); // sets the setItem in the browser at "Button Elohist"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.elohistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Elohist Source to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.jawhistText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Jawhist Source to Hidden
+            });
+        }
+    </script>
+</body>
+</html>

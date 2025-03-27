@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.sAuthor {
+            background-color: #ff1e00;
+        }
+        button.p1Author {
+            background-color: #f50fe9;
+        }
+        button.p2Author {
+            background-color: #a30b9c;
+        }
+        button.editor {
+            background-color: #0d6b05;
+        }
+        button.redactor {
+            background-color: #50025a;
+        }
+        button.laterGlosses {
+            background-color: #d8b30d;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .sAuthorText {
+            color:#ff1e00;
+        }
+        .p1AuthorText {
+            color:#f50fe9;
+        }
+        .p2AuthorText {
+            color:#a30b9c;
+        }
+        .editorText {
+            color:#0d6b05;
+        }
+        .redactorText {
+            color: #50025a;
+        }
+        .laterGlossesText {
+            color:#d8b30d;
+        }
+        .chapterTitleText {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../../index.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Signs Author Only Button -->
+        <button class="sAuthor" onclick="showSAuthorText()">S (Signs Author)</button>
+        <!-- P1 Author Only Button -->
+        <button class="p1Author" onclick="showP1AuthorText()">P1 Author</button>
+        <!-- P2 Author Only Button -->
+        <button class="p2Author" onclick="showP2AuthorText()">P2 Author</button>
+        <!-- Editor Only Button -->
+        <button class="editor" onclick="showEditorText()">Editor</button>
+        <!-- Redactor Only Button -->
+        <button class="redactor" onclick="showRedactorText()">Redactor</button>
+        <!-- Later Glosses Only Button -->
+        <button class="laterGlosses" onclick="showLaterGlossesText()">Later Glosses</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <h2>Post-Resurrection Story - John 21 (ESV) (Howard Teeple)</h2>
+        <div class="text-box" id="mainText"></div>
+    </div>
+
+
+    <script>
+
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All"); // sets the setItem in the browser at "Button All"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p1AuthorText, span.p2AuthorText, span.editorText, span.redactorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Signs Author, P1 Author, P2 Author, Editor, Redactor, and Chapter Titles to Visible
+            });
+        }
+
+        // Signs Author Button
+        function showSAuthorText() {
+            localStorage.setItem("savedLog", "Button Signs Author"); // sets the setItem in the browser at "Button Signs Author"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Signs Author to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.p1AuthorText, span.p2AuthorText, span.editorText, span.redactorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the P1 Author, P2 Author, Editor, Redactor, and Chapter Titles to Hidden
+            });
+        }
+
+        // P1 Author Button
+        function showP1AuthorText() {
+            localStorage.setItem("savedLog", "Button P1 Author"); // sets the setItem in the browser at "Button P1 Author"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.p1AuthorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Semi-Gnostic Author to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p2AuthorText, span.editorText, span.redactorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Signs Author, P2 Author, Editor, Redactor, and Chapter Titles to Hidden
+            });
+        }
+
+        // P2 Author Button
+        function showP2AuthorText() {
+            localStorage.setItem("savedLog", "Button P2 Author"); // sets the setItem in the browser at "Button P2 Author"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.p2AuthorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Semi-Gnostic Author to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p1AuthorText, span.editorText, span.redactorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Signs Author, P1 Author, Editor, Redactor, and Chapter Titles to Hidden
+            });
+        }
+        
+        // Editor Button
+        function showEditorText() {
+            localStorage.setItem("savedLog", "Button Editor"); // sets the setItem in the browser at "Button Editor"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.editorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Editor to Visible
+            });
+
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p1AuthorText, span.p2AuthorText, span.redactorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Signs Author, P1 Author, P2 Author, Redactor, and Chapter Titles to Hidden
+            });
+        }
+
+        // Redactor Button
+        function showRedactorText() {
+            localStorage.setItem("savedLog", "Button Redactor"); // sets the setItem in the browser at "Button Redactor"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.redactorText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Redactor Source to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p1AuthorText, span.p2AuthorText, span.editorText, span.laterGlossesText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Signs Author, P1 Author, P2 Author, Editor, and Chapter Titles to Hidden
+            });
+        }
+
+        // Later Glosses Button
+        function showLaterGlossesText() {
+            localStorage.setItem("savedLog", "Button Later Glosses"); // sets the setItem in the browser at "Button Later Glosses"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.laterGlossesText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Editor to Visible
+            });
+
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.sAuthorText, span.p1AuthorText, span.p2AuthorText, span.editorText, span.redactorText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Signs Author, P1 Author, P2 Author, Redactor, and Chapter Titles to Hidden
+            });
+        }
+    </script>
+</body>
+</html>
