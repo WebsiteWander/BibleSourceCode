@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.chileab {
+            background-color: #ff1e00;
+        }
+        button.daniel {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .chileabText {
+            color: #ff1e00;
+        }
+        .boldChileabText {
+            font-weight: bold;
+        }
+        .danielText {
+            color: #0d6b05;
+        }
+        .boldDanielText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Chileab Button -->
+        <button class="chileab" onclick="showChileabText()">Chileab</button>
+        <!-- Daniel Only Button -->
+        <button class="daniel" onclick="showDanielText()">Daniel</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Who Was David's Second Son? (ESV)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainChileabText">
+            <span class="boldChileabText">CHILEAB</span>
+            <span class="chileabText">
+            2 Samuel 3:2-3
+            And sons were born to David at Hebron: his firstborn was Amnon, of Ahinoam of Jezreel; and <span class="boldChileabText highlightme">his second, Chileab, of Abigail the widow of Nabal of Carmel</span>; and the third, Absalom the son of Maacah the daughter of Talmai king of Geshur;
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainDanielText">
+            <span class="boldDanielText">DANIEL</span>
+            <span class="danielText">
+            1 Chronicles 3:1-2
+            These are the sons of David who were born to him in Hebron: the firstborn, Amnon, by Ahinoam the Jezreelite; <span class="boldDanielText highlightme">the second, Daniel, by Abigail the Carmelite,</span>
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainChileabText', 'mainDanielText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['chileabText', 'boldChileabText', 'danielText', 'boldDanielText'], 'visible');
+        }
+    
+        // Chileab Button
+        function showChileabText() {
+            localStorage.setItem("savedLog", "Button Chileab");
+            setMultipleSpanVisibility(['chileabText', 'boldChileabText'], 'visible');
+            setMultipleSpanVisibility(['danielText', 'boldDanielText'], 'hidden');
+        }
+    
+        // No Button
+        function showDanielText() {
+            localStorage.setItem("savedLog", "Button Daniel");
+            setMultipleSpanVisibility(['danielText', 'boldDanielText'], 'visible');
+            setMultipleSpanVisibility(['chileabText', 'boldChileabText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

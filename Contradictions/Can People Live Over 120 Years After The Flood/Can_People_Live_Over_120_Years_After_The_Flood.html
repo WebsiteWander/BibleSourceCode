@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.yes {
+            background-color: #ff1e00;
+        }
+        button.no {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .yesText {
+            color: #ff1e00;
+        }
+        .boldYesText {
+            font-weight: bold;
+        }
+        .noText {
+            color: #0d6b05;
+        }
+        .boldNoText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Yes Button -->
+        <button class="yes" onclick="showYesText()">Y (Yes)</button>
+        <!-- No Only Button -->
+        <button class="no" onclick="showNoText()">N (No)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Can People Live Over 120 Years After The Flood? (ESV)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainYesText">
+            <span class="boldYesText">YES</span>
+            <span class="yesText">
+            Genesis 11:11
+            And <span class="boldYesText highlightme">Shem lived after he fathered Arpachshad 500 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:13
+            And <span class="boldYesText highlightme">Arpachshad lived after he fathered Shelah 403 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:15
+            And <span class="boldYesText highlightme">Shelah lived after he fathered Eber 403 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:17
+            And <span class="boldYesText highlightme">Eber lived after he fathered Peleg 430 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:19
+            And <span class="boldYesText highlightme">Peleg lived after he fathered Reu 209 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:21
+            And <span class="boldYesText highlightme">Reu lived after he fathered Serug 207 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:23
+            And <span class="boldYesText highlightme">Serug lived after he fathered Nahor 200 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:24-25
+            When <span class="boldYesText highlightme">Nahor had lived 29 years, he fathered Terah. And Nahor lived after he fathered Terah 119 years</span> and had other sons and daughters.
+            </span>
+
+            <span class="yesText">
+            Genesis 11:32
+            <span class="boldYesText highlightme">The days of Terah were 205 years</span>, and Terah died in Haran.
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainNoText">
+            <span class="boldNoText">NO</span>
+            <span class="noText">
+            Genesis 6:3
+            Then the Lord said, “My Spirit shall not abide in man forever, for he is flesh: <span class="boldNoText highlightme">his days shall be 120 years.”</span>
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainYesText', 'mainNoText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['yesText', 'boldYesText', 'noText', 'boldNoText'], 'visible');
+        }
+    
+        // Yes Button
+        function showYesText() {
+            localStorage.setItem("savedLog", "Button Yes");
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'visible');
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'hidden');
+        }
+    
+        // No Button
+        function showNoText() {
+            localStorage.setItem("savedLog", "Button No");
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'visible');
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

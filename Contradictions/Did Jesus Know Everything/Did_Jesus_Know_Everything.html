@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.yes {
+            background-color: #ff1e00;
+        }
+        button.no {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .yesText {
+            color: #ff1e00;
+        }
+        .boldYesText {
+            font-weight: bold;
+        }
+        .noText {
+            color: #0d6b05;
+        }
+        .boldNoText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Yes Button -->
+        <button class="yes" onclick="showYesText()">Y (Yes)</button>
+        <!-- No Only Button -->
+        <button class="no" onclick="showNoText()">N (No)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Did Jesus Know Everything? (ESV)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainYesText">
+            <span class="boldYesText">YES</span>
+            <span class="yesText">
+            John 16:30
+            Now <span class="boldYesText highlightme">we know that you know all things</span> and do not need anyone to question you; this is why we believe that you came from God.”
+            </span>
+
+            <span class="yesText">
+            John 21:17
+            He said to him the third time, “Simon, son of John, do you love me?” Peter was grieved because he said to him the third time, “Do you love me?” and he said to him, <span class="boldYesText highlightme">“Lord, you know everything;</span> you know that I love you.” Jesus said to him, “Feed my sheep.
+            </span>
+
+            <span class="yesText">
+            Colossians 2:2-3
+            that their hearts may be encouraged, being knit together in love, to reach all the riches of full assurance of understanding and the knowledge of God's mystery, <span class="boldYesText highlightme">which is Christ, in whom are hidden all the treasures of wisdom and knowledge</span>.
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainNoText">
+            <span class="boldNoText">NO</span>
+            <span class="noText">
+            Mark 5:30
+            And Jesus, perceiving in himself that power had gone out from him, immediately <span class="boldNoText highlightme">turned about in the crowd and said, “Who touched my garments?”</span>
+            </span>
+
+            <span class="noText">
+            Luke 8:45
+            And <span class="boldNoText highlightme">Jesus said, “Who was it that touched me?”</span> When all denied it, Peter[a] said, “Master, the crowds surround you and are pressing in on you!”
+            </span>
+
+            <span class="noText">
+            Matthew 8:10
+            <span class="boldNoText highlightme">When Jesus heard this, he marveled</span> and said to those who followed him, “Truly, I tell you, with no one in Israel have I found such faith.
+            </span>
+
+            <span class="noText">
+            Luke 7:9
+            <span class="boldNoText highlightme">When Jesus heard this he was amazed at him</span>, and, turning to the crowd following him, he said, “I tell you, not even in Israel have I found such faith.”
+            </span>
+
+            <span class="noText">
+            Mark 13:32
+            “But concerning that day or that hour, <span class="boldNoText highlightme">no one knows,</span> not even the angels in heaven, <span class="boldNoText highlightme">nor the Son, but only the Father</span>.
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainYesText', 'mainNoText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['yesText', 'boldYesText', 'noText', 'boldNoText'], 'visible');
+        }
+    
+        // Yes Button
+        function showYesText() {
+            localStorage.setItem("savedLog", "Button Yes");
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'visible');
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'hidden');
+        }
+    
+        // No Button
+        function showNoText() {
+            localStorage.setItem("savedLog", "Button No");
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'visible');
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

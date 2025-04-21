@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.yes {
+            background-color: #ff1e00;
+        }
+        button.no {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .yesText {
+            color: #ff1e00;
+        }
+        .boldYesText {
+            font-weight: bold;
+        }
+        .noText {
+            color: #0d6b05;
+        }
+        .boldNoText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Yes Button -->
+        <button class="yes" onclick="showYesText()">Y (Yes)</button>
+        <!-- No Only Button -->
+        <button class="no" onclick="showNoText()">N (No)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Can you see God's face and live?</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainYesText">
+            <span class="boldYesText">YES</span>
+            <span class="yesText">
+            Genesis 32:30
+            So Jacob called the name of the place Peniel, saying, <span class="boldYesText highlightme">“For I have seen God face to face, and yet my life has been delivered.”</span>
+            </span>
+
+            <span class="yesText">
+            Exodus 24:9-11
+            Then Moses and Aaron, Nadab, and Abihu, and seventy of the elders of Israel went up, <span class="boldYesText highlightme">and they saw the God of Israel.</span> There was under his feet as it were a pavement of sapphire stone, like the very heaven for clearness. And he did not lay his hand on the chief men of the people of Israel; they beheld God, and ate and drank.
+            </span>
+
+            <span class="yesText">
+            Exodus 33:11
+            <span class="boldYesText highlightme">Thus the Lord used to speak to Moses face to face, as a man speaks to his friend.</span> When Moses turned again into the camp, his assistant Joshua the son of Nun, a young man, would not depart from the tent.
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainNoText">
+            <span class="boldNoText">NO</span>
+            <span class="noText">
+            Exodus 33:20
+            But,” he said, <span class="boldNoText highlightme">“you cannot see my face, for man shall not see me and live.”</span>
+            </span>
+
+            <span class="noText">
+            John 1:18
+            <span class="boldNoText highlightme">No one has ever seen God;</span> the only God, who is at the Father's side, he has made him known.                
+            </span>
+
+            <br>
+
+            <span class="noText">
+            1 Timothy 6:16
+            who alone has immortality, who dwells in unapproachable light, <span class="boldNoText highlightme">whom no one has ever seen or can see.</span> To him be honor and eternal dominion. Amen.                
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainYesText', 'mainNoText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['yesText', 'boldYesText', 'noText', 'boldNoText'], 'visible');
+        }
+    
+        // Yes Button
+        function showYesText() {
+            localStorage.setItem("savedLog", "Button Yes");
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'visible');
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'hidden');
+        }
+    
+        // No Button
+        function showNoText() {
+            localStorage.setItem("savedLog", "Button No");
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'visible');
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

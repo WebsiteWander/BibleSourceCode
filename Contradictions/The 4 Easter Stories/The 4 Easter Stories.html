@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.story1 {
+            background-color: #ff1e00;
+        }
+        button.story2 {
+            background-color: #a80092;
+        }
+        button.story3 {
+            background-color: #0d6b05;
+        }
+        button.story4 {
+            background-color: #13007e;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right, .text-box-third, .text-box-fourth {
+            /* Each box will automatically adjust since grid-template-columns is defined */
+        }
+        .story1Text {
+            color: #ff1e00;
+        }
+        .boldStory1Text {
+            font-weight: bold;
+        }
+        .story2Text {
+            color: #a80092;
+        }
+        .boldStory2Text {
+            font-weight: bold;
+        }
+        .story3Text {
+            color: #0d6b05;
+        }
+        .boldStory3Text {
+            font-weight: bold;
+        }
+        .story4Text {
+            color: #13007e;
+        }
+        .boldStory4Text {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Story 1 Only Button -->
+        <button class="story1" onclick="showStory1Text()">Story 1 (Mark)</button>
+        <!-- Story 2 Only Button -->
+        <button class="story2" onclick="showStory2Text()">Story 2 (Luke)</button>
+        <!-- Story 3 Only Button -->
+        <button class="story3" onclick="showStory3Text()">Story 3 (Matthew)</button>
+        <!-- Story 4 Only Button -->
+        <button class="story4" onclick="showStory4Text()">Story 4 (John)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 4; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">The 4 Easter Stories (ESV)</h2>
+
+        <!-- Column 1 -->
+        <div class="text-box text-box-left" id="mainStory1Text">
+            <span class="boldStory1Text">Story 1</span>
+            <span class="story1Text">
+            <span class="boldStory1Text">The Resurrection</span><br>
+            When the Sabbath was past, Mary Magdalene, Mary the mother of James, and Salome bought spices, so that they might go and anoint him.<br>
+            And very early on the first day of the week, when the sun had risen, they went to the tomb.<br>
+            And they were saying to one another, “Who will roll away the stone for us from the entrance of the tomb?”<br>
+            And looking up, they saw that the stone had been rolled back—it was very large.<br>
+            <span class="boldStory1Text highlightme">And entering the tomb, they saw a young man sitting on the right side, dressed in a white robe, and they were alarmed.</span><br>
+            And he said to them, “Do not be alarmed. You seek Jesus of Nazareth, who was crucified. He has risen; he is not here. See the place where they laid him.<br>
+            But go, tell his disciples and Peter that he is going before you to Galilee. There you will see him, just as he told you.” <br>
+            And they went out and fled from the tomb, for trembling and astonishment had seized them, and they said nothing to anyone, for they were afraid. 
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Column 2 -->
+        <div class="text-box text-box-right" id="mainStory2Text">
+            <span class="boldStory2Text">Story 2</span>
+            <span class="story2Text">
+            <span class="boldStory2Text">The Resurrection</span><br>
+            But on the first day of the week, at early dawn, they went to the tomb, taking the spices they had prepared.<br><br>
+            And they found the stone rolled away from the tomb,<br>
+            <span class="boldStory2Text highlightme">but when they went in they did not find the body of the Lord Jesus.<br>
+            While they were perplexed about this, behold, two men stood by them in dazzling apparel.</span><br>
+            And as they were frightened and bowed their faces to the ground, the men said to them, “Why do you seek the living among the dead?<br>
+            He is not here, but has risen. Remember how he told you, while he was still in Galilee,<br>
+            that the Son of Man must be delivered into the hands of sinful men and be crucified and on the third day rise.”<br>
+            And they remembered his words,<br>
+            and returning from the tomb they told all these things to the eleven and to all the rest. <br>
+            Now it was Mary Magdalene and Joanna and Mary the mother of James and the other women with them who told these things to the apostles,<br>
+            but these words seemed to them an idle tale, and they did not believe them.<br>
+            But Peter rose and ran to the tomb; stooping and looking in, he saw the linen cloths by themselves; and he went home marveling at what had happened.<br>
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Column 3 (empty or you can fill it with additional content) -->
+        <div class="text-box text-box-third" id="mainStory3Text">
+            <span class="boldStory3Text">Story 3</span>
+            <span class="story3Text">
+            <span class="boldStory3Text">The Resurrection</span><br>
+            Now after the Sabbath, toward the dawn of the first day of the week, Mary Magdalene and the other Mary went to see the tomb.<br>
+            <span class="boldStory3Text highlightme">And behold, there was a great earthquake, for an angel of the Lord descended from heaven and came and rolled back the stone and sat on it.<br>
+            His appearance was like lightning, and his clothing white as snow.</span><br>
+            And for fear of him the guards trembled and became like dead men.<br>
+            But the angel said to the women, “Do not be afraid, for I know that you seek Jesus who was crucified.<br>
+            He is not here, for he has risen, as he said. Come, see the place where he lay.<br>
+            Then go quickly and tell his disciples that he has risen from the dead, and behold, he is going before you to Galilee; there you will see him. See, I have told you.”<br>
+            So they departed quickly from the tomb with fear and great joy, and ran to tell his disciples.<br>
+            And behold, Jesus met them and said, “Greetings!” And they came up and took hold of his feet and worshiped him.<br>
+            Then Jesus said to them, “Do not be afraid; go and tell my brothers to go to Galilee, and there they will see me.”<br>
+            </span>
+        </div>
+
+        <!-- Column 4 (empty or you can fill it with additional content) -->
+        <div class="text-box text-box-fourth" id="mainStory4Text">
+            <span class="boldStory4Text">Story 4</span>
+            <span class="story4Text">
+            <span class="boldStory4Text">The Resurrection</span><br>
+            Now on the first day of the week Mary Magdalene came to the tomb early, while it was still dark, and saw that the stone had been taken away from the tomb.<br>
+            So she ran and went to Simon Peter and the other disciple, the one whom Jesus loved, and said to them, “They have taken the Lord out of the tomb, and we do not know where they have laid him.”<br>
+            So Peter went out with the other disciple, and they were going toward the tomb.<br>
+            Both of them were running together, but the other disciple outran Peter and reached the tomb first.<br>
+            And stooping to look in, he saw the linen cloths lying there, but he did not go in.<br>
+            Then Simon Peter came, following him, and went into the tomb. He saw the linen cloths lying there,<br>
+            and the face cloth, which had been on Jesus' head, not lying with the linen cloths but folded up in a place by itself.<br>
+            Then the other disciple, who had reached the tomb first, also went in, and he saw and believed;<br>
+            for as yet they did not understand the Scripture, that he must rise from the dead.<br>
+            Then the disciples went back to their homes.<br>
+
+            <span class="boldStory4Text">Jesus Appears to Mary Magdalene</span><br>
+            But Mary stood weeping outside the tomb, and as she wept she stooped to look into the tomb.<br>
+            <span class="boldStory4Text highlightme">And she saw two angels in white, sitting where the body of Jesus had lain, one at the head and one at the feet.</span><br>
+            They said to her, “Woman, why are you weeping?” She said to them, “They have taken away my Lord, and I do not know where they have laid him.”<br>
+            Having said this, she turned around and saw Jesus standing, but she did not know that it was Jesus.<br>
+            Jesus said to her, “Woman, why are you weeping? Whom are you seeking?” Supposing him to be the gardener, she said to him, “Sir, if you have carried him away, tell me where you have laid him, and I will take him away.”<br>
+            Jesus said to her, “Mary.” She turned and said to him in Aramaic, “Rabboni!” (which means Teacher).<br>
+            Jesus said to her, “Do not cling to me, for I have not yet ascended to the Father; but go to my brothers and say to them, ‘I am ascending to my Father and your Father, to my God and your God.’”<br>
+            Mary Magdalene went and announced to the disciples, “I have seen the Lord”—and that he had said these things to her.<br>
+            </span>
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainStory1Text', 'mainStory2Text', 'mainStory3Text', 'mainStory4Text'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text', 'story2Text', 'boldStory2Text', 'story3Text', 'boldStory3Text', 'story4Text', 'boldStory4Text'], 'visible');
+        }
+    
+        // Story 1 Button
+        function showStory1Text() {
+            localStorage.setItem("savedLog", "Button Story 1");
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text'], 'visible');
+            setMultipleSpanVisibility(['story2Text', 'boldStory2Text', 'story3Text', 'boldStory3Text', 'story4Text', 'boldStory4Text'], 'hidden');
+        }
+    
+        // Story 2 Button
+        function showStory2Text() {
+            localStorage.setItem("savedLog", "Button Story 2");
+            setMultipleSpanVisibility(['story2Text', 'boldStory2Text'], 'visible');
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text', 'story3Text', 'boldStory3Text', 'story4Text', 'boldStory4Text'], 'hidden');
+        }
+        // Story 3 Button
+        function showStory3Text() {
+            localStorage.setItem("savedLog", "Button Story 3");
+            setMultipleSpanVisibility(['story3Text', 'boldStory3Text'], 'visible');
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text', 'story2Text', 'boldStory2Text', 'story4Text', 'boldStory4Text'], 'hidden');
+        }
+        // Story 2 Button
+        function showStory4Text() {
+            localStorage.setItem("savedLog", "Button Story 4");
+            setMultipleSpanVisibility(['story4Text', 'boldStory4Text'], 'visible');
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text', 'story2Text', 'boldStory2Text', 'story3Text', 'boldStory3Text'], 'hidden');
+        }
+    </script>
+</body>
+</html>

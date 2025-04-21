@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.yes {
+            background-color: #ff1e00;
+        }
+        button.no {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .yesText {
+            color: #ff1e00;
+        }
+        .boldYesText {
+            font-weight: bold;
+        }
+        .noText {
+            color: #0d6b05;
+        }
+        .boldNoText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Yes Button -->
+        <button class="yes" onclick="showYesText()">Y (Yes)</button>
+        <!-- No Only Button -->
+        <button class="no" onclick="showNoText()">N (No)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Is Every Word of God Pure? (ESV)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainYesText">
+            <span class="boldYesText">YES</span>
+            <span class="yesText">
+            Psalm 12:6
+            <span class="boldYesText highlightme">The words of the Lord are pure words</span>,
+            like silver refined in a furnace on the ground,
+            purified seven times.
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainNoText">
+            <span class="boldNoText">NO</span>
+            <span class="noText">
+            Ezekiel 23:20
+            and lusted after her lovers there, <span class="boldNoText highlightme">whose members were like those of donkeys</span>, and <span class="boldNoText highlightme">whose issue was like that of horses</span>.
+            </span>
+
+            <span class="noText">
+            Malachi 2:3
+            Behold, <span class="boldNoText highlightme">I will rebuke your offspring, and spread dung on your faces, the dung of your offerings</span>, and you shall be taken away with it.
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainYesText', 'mainNoText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['yesText', 'boldYesText', 'noText', 'boldNoText'], 'visible');
+        }
+    
+        // Yes Button
+        function showYesText() {
+            localStorage.setItem("savedLog", "Button Yes");
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'visible');
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'hidden');
+        }
+    
+        // No Button
+        function showNoText() {
+            localStorage.setItem("savedLog", "Button No");
+            setMultipleSpanVisibility(['noText', 'boldNoText'], 'visible');
+            setMultipleSpanVisibility(['yesText', 'boldYesText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

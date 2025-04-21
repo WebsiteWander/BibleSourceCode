@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.story1 {
+            background-color: #ff1e00;
+        }
+        button.story2 {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .story1Text {
+            color: #ff1e00;
+        }
+        .boldStory1Text {
+            font-weight: bold;
+        }
+        .story2Text {
+            color: #0d6b05;
+        }
+        .boldStory2Text {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Story 1 Button -->
+        <button class="story1" onclick="showStory1Text()">Story 1 (Mark)</button>
+        <!-- Story 2 Button -->
+        <button class="story2" onclick="showStory2Text()">Story 2 (Luke)</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">What Did The Women See And Do When They Entered The Tomb? (ESV)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainstory1Text">
+            <span class="boldStory1Text">A Young Man Sitting As They Were Entering (Mark 16:1-8)</span>
+            <span class="story1Text">
+            <span class="boldStory1Text">The Resurrection</span><br>
+            When the Sabbath was past, Mary Magdalene, Mary the mother of James, and Salome bought spices, so that they might go and anoint him.<br>
+            And very early on the first day of the week, when the sun had risen, they went to the tomb.<br>
+            And they were saying to one another, “Who will roll away the stone for us from the entrance of the tomb?”<br>
+            And looking up, they saw that the stone had been rolled back—it was very large.<br>
+            <span class="boldStory1Text highlightme">And entering the tomb, they saw a young man sitting on the right side, dressed in a white robe, and they were alarmed.</span><br>
+            And he said to them, “Do not be alarmed. You seek Jesus of Nazareth, who was crucified. He has risen; he is not here. See the place where they laid him.<br>
+            But go, tell his disciples and Peter that he is going before you to Galilee. There you will see him, just as he told you.” <br>
+            And they went out and fled from the tomb, for trembling and astonishment had seized them, and they said nothing to anyone, for they were afraid. 
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainstory2Text">
+            <span class="boldStory2Text">Two Men Standing After Being Perplexed (Luke 24:1-9)</span>
+            <span class="story2Text">
+            <span class="boldStory2Text">The Resurrection</span><br>
+            But on the first day of the week, at early dawn, they went to the tomb, taking the spices they had prepared.<br><br>
+            And they found the stone rolled away from the tomb,<br>
+            <span class="boldStory2Text highlightme">but when they went in they did not find the body of the Lord Jesus.<br>
+            While they were perplexed about this, behold, two men stood by them in dazzling apparel.</span><br>
+            And as they were frightened and bowed their faces to the ground, the men said to them, “Why do you seek the living among the dead?<br>
+            He is not here, but has risen. Remember how he told you, while he was still in Galilee,<br>
+            that the Son of Man must be delivered into the hands of sinful men and be crucified and on the third day rise.”<br>
+            And they remembered his words,<br>
+            and returning from the tomb they told all these things to the eleven and to all the rest. <br>
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainstory1Text', 'mainstory2Text'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text', 'story2Text', 'boldStory2Text'], 'visible');
+        }
+    
+        // Yes Button
+        function showStory1Text() {
+            localStorage.setItem("savedLog", "Button Yes");
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text'], 'visible');
+            setMultipleSpanVisibility(['story2Text', 'boldStory2Text'], 'hidden');
+        }
+    
+        // No Button
+        function showStory2Text() {
+            localStorage.setItem("savedLog", "Button No");
+            setMultipleSpanVisibility(['story2Text', 'boldStory2Text'], 'visible');
+            setMultipleSpanVisibility(['story1Text', 'boldStory1Text'], 'hidden');
+        }
+    </script>
+</body>
+</html>

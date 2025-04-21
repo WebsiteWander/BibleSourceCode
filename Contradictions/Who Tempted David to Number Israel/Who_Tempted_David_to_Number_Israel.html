@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.god {
+            background-color: #ff1e00;
+        }
+        button.satan {
+            background-color: #0d6b05;
+        }
+        .container {
+            width: 70%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .text-box-left, .text-box-right {
+            /* Optional: You can style each box differently, but they'll behave as columns by default */
+        }
+        .godText {
+            color: #ff1e00;
+        }
+        .boldGodText {
+            font-weight: bold;
+        }
+        .satanText {
+            color: #0d6b05;
+        }
+        .boldSatanText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Contradictions_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- God Button -->
+        <button class="god" onclick="showGodText()">God</button>
+        <!-- Satan Button -->
+        <button class="satan" onclick="showSatanText()">Satan</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <!-- Title (above the text boxes) -->
+        <h2 style="grid-column: span 2; text-align: center; font-size: 24px; margin: 0; padding-bottom: 5px; margin-top: 20px; padding-top: 0;">Who Tempted David to Number Israel? (NRSVUE)</h2>
+
+        <!-- Left Column -->
+        <div class="text-box text-box-left" id="mainGodText">
+            <span class="boldGodText">GOD</span>
+            <span class="godText">
+            2 Samuel 24:1
+            Again <span class="boldGodText highlightme">the anger of the Lord was kindled against Israel, and he incited David against them, saying, “Go, count the people of Israel and Judah.”</span>
+            </span>
+            <!-- More content here... -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="text-box text-box-right" id="mainSatanText">
+            <span class="boldSatanText">SATAN</span>
+            <span class="satanText">
+            1 Chronicles 21:1
+            <span class="boldSatanText highlightme">Satan stood up against Israel and incited David to count the people of Israel.</span>
+            </span>
+            <!-- More content here... -->
+        </div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainGodText', 'mainSatanText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['godText', 'boldGodText', 'satanText', 'boldSatanText'], 'visible');
+        }
+    
+        // God Button
+        function showGodText() {
+            localStorage.setItem("savedLog", "Button God");
+            setMultipleSpanVisibility(['godText', 'boldGodText'], 'visible');
+            setMultipleSpanVisibility(['satanText', 'boldSatanText'], 'hidden');
+        }
+    
+        // Satan Button
+        function showSatanText() {
+            localStorage.setItem("savedLog", "Button Satan");
+            setMultipleSpanVisibility(['satanText', 'boldSatanText'], 'visible');
+            setMultipleSpanVisibility(['godText', 'boldGodText'], 'hidden');
+        }
+    </script>
+</body>
+</html>
