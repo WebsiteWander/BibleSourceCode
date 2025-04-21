@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Bible's Source Code™ - Homepage</title>
+    <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: black;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        .main-button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Wrap on smaller screens */
+        }
+
+        .main-button {
+            width: 372.594px;
+            height: 70px;
+            margin: 10px; /* Space to prevent shifting on hover */
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        .main-button:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Color themes */
+        .button_stories { background-color: #007BFF; }     /* Blue */
+        .button_contradictions { background-color: #ff1e00; } /* Red */
+        .button_pagan { background-color: #0d6b05; }        /* Green */
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 1200px) {
+            .main-button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">The Bible's Source Code™</div>
+
+    <div class="main-button-container">
+        <a href="Stories/Stories_Hub.html" class="main-button button_stories">Stories</a>
+        <a href="Contradictions/Contradictions_Hub.html" class="main-button button_contradictions">Contradictions</a>
+        <a href="#" class="main-button button_pagan">Pagan Stuff (Still In Progress)</a>
+    </div>
+</body>
+</html>
