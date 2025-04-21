@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.catchingFishStory {
+            background-color: #ff1e00;
+        }
+        button.mealStory {
+            background-color: #0d6b05;
+        }
+        button.tripleAffirmationStory {
+            background-color: #a30b9c;
+        }
+        button.redactor {
+            background-color: #50025a;
+        }
+        button.laterGlosses {
+            background-color: #836b00;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .catchingFishStoryText {
+            color:#ff1e00;
+        }
+        .mealStoryText {
+            color:#0d6b05;
+        }
+        .tripleAffirmationStoryText {
+            color:#a30b9c;
+        }
+        .redactorText {
+            color: #50025a;
+        }
+        .laterGlossesText {
+            color:#836b00;
+        }
+        .chapterTitleText {
+            font-weight: bold;
+        }
+        .boldText {
+            font-weight: bold;
+        }
+        .highlightme {
+            background-color: #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Stories_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Catching Fish Story Only Button -->
+        <button class="catchingFishStory" onclick="showCatchingFishStoryText()">Catching Fish Story</button>
+        <!-- Meal Story Only Button -->
+        <button class="mealStory" onclick="showMealStoryText()">Meal Story</button>
+        <!-- Triple Affirmation Story Only Button -->
+        <button class="tripleAffirmationStory" onclick="showTripleAffirmationStoryText()">Triple Affirmation Story</button>
+        <!-- Redactor Only Button -->
+        <button class="redactor" onclick="showRedactorText()">Redactor</button>
+        <!-- Later Glosses Only Button -->
+        <button class="laterGlosses" onclick="showLaterGlossesText()">Later Glosses</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <h2>Post-Resurrection Story - John 21 (ESV) (Howard Teeple)</h2>
+        <div class="text-box" id="mainText"><span class="chapterTitleText">Jesus Appears to Seven Disciples</span><span class="redactorText">
+            21 After this Jesus revealed himself again to the disciples by the Sea of Tiberias, and he revealed himself in this way. </span><span class="catchingFishStoryText">2 Simon Peter, Thomas </span><span class="redactorText">(called the Twin)</span><span class="catchingFishStoryText">, Nathanael </span><span class="redactorText">of Cana in Galilee, the sons of Zebedee</span><span class="catchingFishStoryText">, and two others of his disciples were together. 3 Simon Peter said to them, “I am going fishing.” They said to him, “We will go with you.” They went out and got into the boat, but that night they caught nothing.
+            
+            </span><span class="mealStoryText">4 Just as day was breaking, Jesus stood on the shore; yet the disciples did not know that it was Jesus. 5 Jesus said to them, “Children, do you have any fish?” They answered him, “No.” </span><span class="catchingFishStoryText">6 He said to them, “Cast the net on the right side of the boat, and you will find some.” So they cast it, and now they were not able to haul it in, because of the quantity of fish. </span><span class="redactorText">7 That disciple whom Jesus loved therefore said to Peter, “It is the Lord!” When Simon Peter heard that it was the Lord, </span><span class="catchingFishStoryText">he put on his outer garment, </span><span class="redactorText">for he was stripped for work, </span><span class="catchingFishStoryText">and threw himself into the sea. 8 The other disciples came </span><span class="redactorText">in the boat, </span><span class="catchingFishStoryText">dragging the net full of fish</span><span class="redactorText">, for they were not far from the land, but about a hundred yards off.
+            
+            </span><span class="mealStoryText">9 When they got out on land, they saw a charcoal fire in place, with fish laid out on it, and bread. </span><span class="redactorText">10 Jesus said to them, “Bring some of the fish that you have just caught.” </span><span class="catchingFishStoryText">11 So Simon Peter went aboard and hauled the net ashore, full of large fish, 153 of them. And although there were so many, the net was not torn. </span><span class="mealStoryText">12 Jesus said to them, “Come and have breakfast.” Now none of the disciples dared ask him, “Who are you?” They knew it was the Lord. 13 Jesus came and took the bread and gave it to them, and so with the fish. </span><span class="redactorText">14 This was now the third time that Jesus was revealed to the disciples after he was raised from the dead.
+            
+            </span><span class="chapterTitleText">Jesus and Peter</span><span class="redactorText">
+            15 When they had finished breakfast, Jesus said to Simon Peter, </span><span class="tripleAffirmationStoryText">“Simon, son of John, do you love me more than these?” He said to him, “Yes, Lord; you know that I love you.” He said to him, “Feed my lambs.” 16 He said to him a second time, “Simon, son of John, do you love me?” He said to him, “Yes, Lord; you know that I love you.” He said to him, “Tend my sheep.” 17 He said to him the third time, “Simon, son of John, do you love me?” </span><span class="redactorText">Peter was grieved because he said to him the third time, “Do you love me?” and he said to him, </span><span class="tripleAffirmationStoryText">“Lord, </span><span class="redactorText">you know everything; </span><span class="tripleAffirmationStoryText">you know that I love you.” Jesus said to him, “Feed my sheep. </span><span class="redactorText">18 Truly, truly, I say to you, when you were young, you used to dress yourself and walk wherever you wanted, but when you are old, you will stretch out your hands, and another will dress you and carry you where you do not want to go.” 19 (This he said to show by what kind of death he was to glorify God.) And after saying this he said to him, “Follow me.”
+            
+            </span><span class="chapterTitleText">Jesus and the Beloved Apostle</span><span class="redactorText">
+            20 Peter turned and saw the disciple whom Jesus loved following them, the one who also had leaned back against him during the supper and had said, “Lord, who is it that is going to betray you?” 21 When Peter saw him, he said to Jesus, “Lord, what about this man?” 22 Jesus said to him, “If it is my will that he remain until I come, what is that to you? You follow me!” 23 So the saying spread abroad among the brothers that this disciple was not to die; yet Jesus did not say to him that he was not to die, but, “If it is my will that he remain until I come, what is that to you?”
+            
+            24 This is the disciple who is bearing witness about these things, and who has written these things, and we know that his testimony is true.
+            
+            </span><span class="laterGlossesText">25 Now there are also many other things that Jesus did. Were every one of them to be written, I suppose that the world itself could not contain the books that would be written.</span></div>
+    </div>
+
+    <script>
+        // Helper: Set visibility for one span class across both columns
+        function setSpanVisibility(spanClass, visibility) {
+            ['mainText'].forEach(function(id) {
+                var div = document.getElementById(id);
+                var spans = div.querySelectorAll('span.' + spanClass);
+                spans.forEach(function(span) {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+    
+        // Helper: Set visibility for multiple span classes at once
+        function setMultipleSpanVisibility(spanClasses, visibility) {
+            spanClasses.forEach(function(spanClass) {
+                setSpanVisibility(spanClass, visibility);
+            });
+        }
+    
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All");
+            setMultipleSpanVisibility(['catchingFishStoryText', 'mealStoryText', 'tripleAffirmationStoryText', 'redactorText', 'laterGlossesText', 'chapterTitleText'], 'visible');
+        }
+    
+        // Catching Fish Story Button
+        function showCatchingFishStoryText() {
+            localStorage.setItem("savedLog", "Button Catching Fish Story");
+            setMultipleSpanVisibility(['catchingFishStoryText'], 'visible');
+            setMultipleSpanVisibility(['mealStoryText', 'tripleAffirmationStoryText', 'redactorText', 'laterGlossesText', 'chapterTitleText'], 'hidden');
+        }
+
+        // Meal Story Button
+        function showMealStoryText() {
+            localStorage.setItem("savedLog", "Button Meal Story");
+            setMultipleSpanVisibility(['mealStoryText'], 'visible');
+            setMultipleSpanVisibility(['catchingFishStoryText', 'tripleAffirmationStoryText', 'redactorText', 'laterGlossesText', 'chapterTitleText'], 'hidden');
+        }
+
+        // Triple Affirmation Button
+        function showTripleAffirmationStoryText() {
+            localStorage.setItem("savedLog", "Button Triple Affirmation");
+            setMultipleSpanVisibility(['tripleAffirmationStoryText'], 'visible');
+            setMultipleSpanVisibility(['catchingFishStoryText', 'mealStoryText', 'redactorText', 'laterGlossesText', 'chapterTitleText'], 'hidden');
+        }
+
+        // Redactor Button
+        function showRedactorText() {
+            localStorage.setItem("savedLog", "Button Redactor");
+            setMultipleSpanVisibility(['redactorText'], 'visible');
+            setMultipleSpanVisibility(['catchingFishStoryText', 'mealStoryText', 'tripleAffirmationStoryText', 'laterGlossesText', 'chapterTitleText'], 'hidden');
+        }
+
+        // Later Glosses Button
+        function showLaterGlossesText() {
+            localStorage.setItem("savedLog", "Button Later Glosses");
+            setMultipleSpanVisibility(['laterGlossesText'], 'visible');
+            setMultipleSpanVisibility(['catchingFishStoryText', 'mealStoryText', 'tripleAffirmationStoryText', 'redactorText', 'chapterTitleText'], 'hidden');
+        }
+    </script>
+</body>
+</html>

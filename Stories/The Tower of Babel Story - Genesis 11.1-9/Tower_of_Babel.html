@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.cityReportStory {
+            background-color: #ff1e00;
+        }
+        button.towerRecensionStory {
+            background-color: #0a0b5e;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .cityText {
+            color:#ff1e00;
+        }
+        .towerText {
+            color:#0a0b5e;
+        }
+        .chapterTitleText {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Stories_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- City Report story Only Button -->
+        <button class="cityReportStory" onclick="showCityReportText()">City Report</button>
+        <!-- Tower Recension story Only Button -->
+        <button class="towerRecensionStory" onclick="showTowerRecensionText()">Tower Recension</button>
+    </div>
+
+    <!-- Main Text -->
+    <div class="container">
+        <h2>The Tower of Babel Story - Genesis 11:1-9 (ESV) (Gunkel)</h2>
+        <div class="text-box" id="mainText"><span class="chapterTitleText">The Tower of Babel</span><span class="cityText">
+            11 Now the whole earth had one language and the same words. </span><span class="towerText">2 And as people migrated from the east, they found a plain in the land of Shinar and settled there. </span><span class="cityText">3 And they said to one another, “Come, let us make bricks, and burn them thoroughly.” </span><span class="towerText">And they had brick for stone, and bitumen for mortar. </span><span class="cityText">4 Then they said, “Come, let us build ourselves a city </span><span class="towerText">and a tower with its top in the heavens, </span><span class="cityText">and let us make a name for ourselves, </span><span class="towerText">lest we be dispersed over the face of the whole earth.” 5 And the Lord came down to see the city and the tower, which the children of man had built. </span><span class="cityText">6 And the Lord said, “Behold, they are one people, and they have all one language, </span><span class="towerText">and this is only the beginning of what they will do. And nothing that they propose to do will now be impossible for them. </span><span class="cityText">7 Come, let us go down and there confuse their language, so that they may not understand one another's speech.” </span><span class="towerText">8 So the Lord dispersed them from there over the face of all the earth, </span><span class="cityText">and they left off building the city. 9 Therefore its name was called Babel, because there the Lord confused the language of all the earth. </span><span class="towerText">And from there the Lord dispersed them over the face of all the earth.</span></div>
+    </div>
+
+
+    <script>
+
+        // All Button
+        function showAllText() {
+            localStorage.setItem("savedLog", "Button All"); // sets the setItem in the browser at "Button All"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.cityText, span.towerText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the City Report Source, Tower Recension Source, and Chapter Titles to Visible
+            });
+        }
+
+        // City Report Button
+        function showCityReportText() {
+            localStorage.setItem("savedLog", "Button City Report"); // sets the setItem in the browser at "Button City Report"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.cityText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the City Report Story to Visible
+            });
+            
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.towerText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the Tower Recension Story and Chapter Titles to Hidden
+            });
+        }
+        
+        // Tower Recension Button
+        function showTowerRecensionText() {
+            localStorage.setItem("savedLog", "Button Tower Recension"); // sets the setItem in the browser at "Button Tower Recension"
+            // let text = localStorage.getItem("savedLog") || "No saved log found.";
+            // document.getElementById("mainText").textContent = text;
+            
+            // Show itself
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.towerText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "visible"; // Change the Visibility of the Tower Recension Story to Visible
+            });
+
+            // Hide the other sources
+            // Select all span elements inside the div with id 'mainText'
+            var div = document.getElementById("mainText");
+            var spans = div.querySelectorAll("span.cityText, span.chapterTitleText");  // Select all <span> elements within this div
+            // Loop through all the spans and apply new styles
+            spans.forEach(function(span) {
+                span.style.visibility = "hidden"; // Change the Visibility of the City Report Story and Chapter Titles to Hidden
+            });
+        }
+    </script>
+</body>
+</html>
