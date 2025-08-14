@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories Hub - The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #f9f9f9; /* Matches original background */
+            color: black;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        /* Title */
+        .title {
+            /* font-size: 36px; */
+            font-size: 28px; /* Smaller title for all devices */
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        /* XXX Card Container (3 Columns) XXX */
+        /* XXX Card Container (2 Columns for All Devices) XXX */
+        .card-container {
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr);  */ /* 3 columns */
+            grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+            gap: 15px;
+            width: 80%;
+            max-width: 600px; /* Keep the max width for consistency */
+            margin-top: 30px;
+        }
+
+        /* Individual Cards */
+        .card {
+            width: 100%;
+            /* height: 60px; */
+            height: 50px; /* Smaller card height */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* font-size: 18px; */ 
+            font-size: 14px; /* Smaller card text */
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Restore Original Card Colors */
+        .card_1 { background-color: #007BFF; }
+        .card_2 { background-color: #ff1e00; }
+        .card_3 { background-color: #0d6b05; }
+        .card_4 { background-color: #0a0b5e; }
+        .card_5 { background-color: #BA55D3; }
+        .card_6 { background-color: #FFA500; }
+        .card_7 { background-color: #4682B4; }
+        .card_8 { background-color: #228B22; }
+        .card_9 { background-color: #DC143C; }
+        .card_10 { background-color: #007BFF; }
+        .card_11 { background-color: #ff1e00; }
+        .card_12 { background-color: #0d6b05; }
+        .card_13 { background-color: #0a0b5e; }
+        .card_14 { background-color: #BA55D3; }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../index.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+
+    <!-- Navigation Cards (Now in 3 Columns) -->
+    <div class="card-container">
+        <a href="David and Goliath Story - 1 Samuel 17/David_and_Goliath_Story.html" class="card card_1">David and Goliath Story</a>
+        <a href="Resurrection of Jesus - John 20/Resurrection_of_Jesus.html" class="card card_8">Resurrection of Jesus</a>
+
+
+        <a href="#" class="card card_2">Jacob Deceives Isaac (Still in Progress)</a>
+        <a href="The Book of Records List - Genesis 5-11/Book_of_Records.html" class="card card_9">The Book of Records List</a>
+
+
+        <a href="Jesus Arrested and Crucified - John 18-19/Jesus_Arrested_and_Crucified.html" class="card card_3">Jesus Arrested and Crucified</a>
+        <a href="The Creation Story - Genesis 1-3/Creation_Story.html" class="card card_10">The Creation Story</a>
+
+
+        <a href="Joseph Sold into Slavery - Genesis 37.2ab-36/Joseph_into_Slavery.html" class="card card_4">Joseph Sold into Slavery</a>
+        <a href="The Flood Story - Genesis 6.9-9.17/Flood_Story.html" class="card card_11">The Flood Story</a>
+
+
+        <a href="Korah's Rebellion - Number 16.1-35/Korah_Rebellion.html" class="card card_5">Korah's Rebellion</a>
+        <a href="The Plagues Cycle - Exodus 7.8-11.10/Plagues_Cycle.html" class="card card_12">The Plagues Cycle</a>
+
+
+        <a href="Parting of the Red Sea - Exodus 14/Red_Sea_Story.html" class="card card_6">Parting of the Red Sea Story</a>
+        <a href="The Sacrifice of Isaac - Genesis 22.1-19/Isaac_Sacrifice.html" class="card card_13">The Sacrifice of Isaac</a>
+
+
+        
+        <a href="Post-Resurrection Story - John 21/Post-Resurrection_Story.html" class="card card_7">Post-Resurrection Story</a>
+        <a href="The Tower of Babel Story - Genesis 11.1-9/Tower_of_Babel.html" class="card card_14">The Tower of Babel Story</a>
+    </div>
+</body>
+</html>
