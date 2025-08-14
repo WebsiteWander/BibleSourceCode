@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bible's Source Code™</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            /* background-color: #007BFF; */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button.all {
+            background-color: #007BFF;
+        }
+        button.jawhist {
+            background-color: #ff1e00;
+        }
+        button.priestly {
+            background-color: #0a0b5e;
+        }
+        button.redactor {
+            background-color: #50025a;
+        }
+        button.jawhist-original {
+            background-color: #83352b;
+        }
+        button.priestly-original {
+            background-color: #7174fa;
+        }
+        /* 
+        button:hover {
+            background-color: #0056b3;
+        }
+        */
+        .container {
+            width: 70%;
+            max-width: 900px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+        .text-box {
+            height: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            margin: 0 auto;
+        }
+        .jawhistText {
+            color:#ff1e00;
+        }
+        .priestlyText {
+            color:#0a0b5e;
+        }
+        .redactorText {
+            color: #50025a;
+        }
+        .chapterTitleText {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><a href="../Stories_Hub.html" style="text-decoration:none; color: black;">The Bible's Source Code™</a></div>
+    
+    <!-- Top Buttons -->
+    <div class="button-container">
+        <!-- All Button -->
+        <button class="all" onclick="showAllText()">All</button>
+        <!-- Jawhist Only Button -->
+        <button class="jawhist" onclick="showJawhistText()">J (Jawhist)</button>
+        <!-- Priestly Source Only Button -->
+        <button class="priestly" onclick="showPriestlySourceText()">P (Priestly Source)</button>
+        <!-- Redactor Only Button -->
+        <button class="redactor" onclick="showRedactorText()">Redactor</button>
+    </div>
+
+    <!-- Text Box -->
+    <div class="container">
+        <h2>Korah's Rebellion - Numbers 16:1-35 (ESV) (Richard Friedman)</h2>
+        <div class="text-box" id="mainText"></div>
+    </div>
+
+
+    <!-- Bottom Buttons -->
+    <div style="margin-top:15px;">
+        <button class="jawhist-original" onclick="setText('originalJStory')">Original J Story</button>
+        <button class="priestly-original" onclick="setText('originalPStory')">Original P Story</button>
+    </div>
+
+
+
+
+    <!-- Text Templates -->
+    <template id="text-main">
+        <span class="chapterTitleText">Korah's Rebellion</span><span class="priestlyText">
+        16 Now Korah the son of Izhar, son of Kohath, son of Levi, </span><span class="jawhistText">and Dathan and Abiram the sons of Eliab, and On the son of Peleth, sons of Reuben, </span><span class="priestlyText">took men. </span><span class="jawhistText">2 And they rose up before Moses, </span><span class="priestlyText">with a number of the people of Israel, 250 chiefs of the congregation, chosen from the assembly, well-known men. 3 They assembled themselves together against Moses and against Aaron and said to them, “You have gone too far! For all in the congregation are holy, every one of them, and the Lord is among them. Why then do you exalt yourselves above the assembly of the Lord?” 4 When Moses heard it, he fell on his face, 5 and he said to Korah and all his company, “In the morning the Lord will show who is his, and who is holy, and will bring him near to him. The one whom he chooses he will bring near to him. 6 Do this: take censers, Korah and all his company; 7 put fire in them and put incense on them before the Lord tomorrow, and the man whom the Lord chooses shall be the holy one. You have gone too far, sons of Levi!” 8 And Moses said to Korah, “Hear now, you sons of Levi: 9 is it too small a thing for you that the God of Israel has separated you from the congregation of Israel, to bring you near to himself, to do service in the tabernacle of the Lord and to stand before the congregation to minister to them, 10 and that he has brought you near him, and all your brothers the sons of Levi with you? And would you seek the priesthood also? 11 Therefore it is against the Lord that you and all your company have gathered together. What is Aaron that you grumble against him?”
+        
+        </span><span class="jawhistText">12 And Moses sent to call Dathan and Abiram the sons of Eliab, and they said, “We will not come up. 13 Is it a small thing that you have brought us up out of a land flowing with milk and honey, to kill us in the wilderness, that you must also make yourself a prince over us? 14 Moreover, you have not brought us into a land flowing with milk and honey, nor given us inheritance of fields and vineyards. Will you put out the eyes of these men? We will not come up.” </span><span class="priestlyText">15 And Moses was very angry and said to the Lord, “Do not respect their offering. I have not taken one donkey from them, and I have not harmed one of them.”
+        
+        16 And Moses said to Korah, “Be present, you and all your company, before the Lord, you and they, and Aaron, tomorrow. 17 And let every one of you take his censer and put incense on it, and every one of you bring before the Lord his censer, 250 censers; you also, and Aaron, each his censer.” 18 So every man took his censer and put fire in them and laid incense on them and stood at the entrance of the tent of meeting with Moses and Aaron. 19 Then Korah assembled all the congregation against them at the entrance of the tent of meeting. And the glory of the Lord appeared to all the congregation.
+        
+        20 And the Lord spoke to Moses and to Aaron, saying, 21 “Separate yourselves from among this congregation, that I may consume them in a moment.” 22 And they fell on their faces and said, “O God, the God of the spirits of all flesh, shall one man sin, and will you be angry with all the congregation?” 23 And the Lord spoke to Moses, saying, 24 “Say to the congregation, Get away from the dwelling of Korah</span><span class="redactorText">, Dathan, and Abiram.”
+        
+        </span><span class="jawhistText">25 Then Moses rose and went to Dathan and Abiram, and the elders of Israel followed him. 26 And he spoke to the congregation, saying, “Depart, please, from the tents of these wicked men, and touch nothing of theirs, lest you be swept away with all their sins.”</span><span class="priestlyText"> 27 So they got away from the dwelling of Korah, </span><span class="redactorText">Dathan, and Abiram. </span><span class="jawhistText">And Dathan and Abiram came out and stood at the door of their tents, together with their wives, their sons, and their little ones. 28 And Moses said, “Hereby you shall know that the Lord has sent me to do all these works, and that it has not been of my own accord. 29 If these men die as all men die, or if they are visited by the fate of all mankind, then the Lord has not sent me. 30 But if the Lord creates something new, and the ground opens its mouth and swallows them up with all that belongs to them, and they go down alive into Sheol, then you shall know that these men have despised the Lord.”
+        
+        31 And as soon as he had finished speaking all these words, the ground under them split apart. 32 And the earth opened its mouth and swallowed them up, with their households </span><span class="priestlyText">and all the people who belonged to Korah and all their goods. </span><span class="jawhistText">33 So they and all that belonged to them went down alive into Sheol, and the earth closed over them, and they perished from the midst of the assembly. 34 And all Israel who were around them fled at their cry, for they said, “Lest the earth swallow us up!” </span><span class="priestlyText">35 And fire came out from the Lord and consumed the 250 men offering the incense.</span>
+    </template>
+
+    <template id="original-j-story"><span>
+        And Dathan and Abiram the sons of Eliab, and On the son of Peleth, sons of Reuben, and they rose up before Moses. 
+        
+        And Moses sent to call Dathan and Abiram the sons of Eliab, and they said, “We will not come up. Is it a small thing that you have brought us up out of a land flowing with milk and honey, to kill us in the wilderness, that you must also make yourself a prince over us? Moreover, you have not brought us into a land flowing with milk and honey, nor given us inheritance of fields and vineyards. Will you put out the eyes of these men? We will not come up.” 
+        
+        Then Moses rose and went to Dathan and Abiram, and the elders of Israel followed him. 
+        
+        And he spoke to the congregation, saying, “Depart, please, from the tents of these wicked men, and touch nothing of theirs, lest you be swept away with all their sins." 
+        
+        And Dathan and Abiram came out and stood at the door of their tents, together with their wives, their sons, and their little ones. 
+        
+        And Moses said, “Hereby you shall know that the Lord has sent me to do all these works, and that it has not been of my own accord. If these men die as all men die, or if they are visited by the fate of all mankind, then the Lord has not sent me. But if the Lord creates something new, and the ground opens its mouth and swallows them up with all that belongs to them, and they go down alive into Sheol, then you shall know that these men have despised the Lord.”
+        
+        And as soon as he had finished speaking all these words, the ground under them split apart. And the earth opened its mouth and swallowed them up, with their households. 
+        
+        So they and all that belonged to them went down alive into Sheol, and the earth closed over them, and they perished from the midst of the assembly. And all Israel who were around them fled at their cry, for they said, “Lest the earth swallow us up!” </span>
+    </template>
+
+    <template id="original-p-story"><span>
+        Now Korah the son of Izhar, son of Kohath, son of Levi, took men with a number of the people of Israel, 250 chiefs of the congregation, chosen from the assembly, well-known men. 
+        
+        They assembled themselves together against Moses and against Aaron and said to them, “You have gone too far! For all in the congregation are holy, every one of them, and the Lord is among them. Why then do you exalt yourselves above the assembly of the Lord?” 
+        
+        When Moses heard it, he fell on his face, and he said to Korah and all his company, “In the morning the Lord will show who is his, and who is holy, and will bring him near to him. The one whom he chooses he will bring near to him. Do this: take censers, Korah and all his company; put fire in them and put incense on them before the Lord tomorrow, and the man whom the Lord chooses shall be the holy one. You have gone too far, sons of Levi!” 
+        
+        And Moses said to Korah, “Hear now, you sons of Levi: is it too small a thing for you that the God of Israel has separated you from the congregation of Israel, to bring you near to himself, to do service in the tabernacle of the Lord and to stand before the congregation to minister to them, and that he has brought you near him, and all your brothers the sons of Levi with you? And would you seek the priesthood also? Therefore it is against the Lord that you and all your company have gathered together. What is Aaron that you grumble against him?”
+        
+        And Moses was very angry and said to the Lord, “Do not respect their offering. I have not taken one donkey from them, and I have not harmed one of them.”
+        
+        And Moses said to Korah, “Be present, you and all your company, before the Lord, you and they, and Aaron, tomorrow. And let every one of you take his censer and put incense on it, and every one of you bring before the Lord his censer, 250 censers; you also, and Aaron, each his censer.” 
+        
+        So every man took his censer and put fire in them and laid incense on them and stood at the entrance of the tent of meeting with Moses and Aaron. Then Korah assembled all the congregation against them at the entrance of the tent of meeting. 
+        
+        And the glory of the Lord appeared to all the congregation. And the Lord spoke to Moses and to Aaron, saying, “Separate yourselves from among this congregation, that I may consume them in a moment.” 
+        
+        And they fell on their faces and said, “O God, the God of the spirits of all flesh, shall one man sin, and will you be angry with all the congregation?” 
+        
+        And the Lord spoke to Moses, saying, “Say to the congregation, Get away from the dwelling of Korah." So they got away from the dwelling of Korah, and all the people who belonged to Korah and all their goods. 
+        
+        And fire came out from the Lord and consumed the 250 men offering the incense.</span>
+    </template>
+
+
+    <script>
+
+        const texts = {
+            main: document.getElementById('text-main').innerHTML,
+            originalJStory: document.getElementById('original-j-story').innerHTML,
+            originalPStory: document.getElementById('original-p-story').innerHTML
+        };
+
+        function setText(key) {
+            const div = document.getElementById('mainText');
+            div.innerHTML = texts[key] || texts.main;
+        }
+
+        window.onload = () => {
+            setText('main');
+        };
+
+
+
+        // Helper function to set visibility for multiple span classes
+        function setMultipleSpanVisibility(classNames, visibility) {
+            const div = document.getElementById("mainText");
+            classNames.forEach(className => {
+                div.querySelectorAll(`span.${className}`).forEach(span => {
+                    span.style.visibility = visibility;
+                });
+            });
+        }
+
+        // All Button
+        function showAllText() {
+            setText('main'); // load main text first
+            setMultipleSpanVisibility(['jawhistText', 'priestlyText', 'redactorText', 'chapterTitleText'], 'visible');
+        }
+
+        // Jawhist Button
+        function showJawhistText() {
+            setText('main'); // load main text first
+            setMultipleSpanVisibility(['jawhistText'], 'visible');
+            setMultipleSpanVisibility(['priestlyText', 'redactorText', 'chapterTitleText'], 'hidden');
+        }
+        
+        // Priestly Source Button
+        function showPriestlySourceText() {
+            setText('main'); // load main text first
+            setMultipleSpanVisibility(['priestlyText'], 'visible');
+            setMultipleSpanVisibility(['jawhistText', 'redactorText', 'chapterTitleText'], 'hidden');
+        }
+
+        // Redactor Button
+        function showRedactorText() {
+            setText('main'); // load main text first
+            setMultipleSpanVisibility(['redactorText'], 'visible');
+            setMultipleSpanVisibility(['jawhistText', 'priestlyText', 'chapterTitleText'], 'hidden');
+        }
+    </script>
+</body>
+</html>
